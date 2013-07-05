@@ -27,6 +27,10 @@ parseInt(amount);
 }
 
 
+/*
+Name: Start Bullets Functions
+Purpose: To start the base of the start bullets function.
+*/
 
 function startBullets(){
 bullets = parseInt(bullets);
@@ -43,6 +47,8 @@ writeGreen("[FxS] Bullet System Loaded!");
 
 
 }
+
+// Name: Add Bullets Function
 
 function addBullets(amount){
 

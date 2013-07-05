@@ -1,0 +1,339 @@
+// Name: Roach's Money System - JavaScript
+// Description: A money system, that can be used on Web HTML.
+
+// Start of Global Variables
+
+var cash;
+var newCash;
+var bullets;
+var health;
+var newHealth;
+var name;
+var charityBank;
+
+ // End of Global Variables \\
+
+// Start System \\
+
+function startSystem(version, amount, wealth){
+
+writeGreen("[FxS] Authenticated for Developer use...");
+writeGreen("[FxS] Version: " + version);
+
+cash = amount;
+parseInt(amount);
+
+
+}
+
+
+
+function startBullets(){
+bullets = parseInt(bullets);
+bulletsCost = 50;
+
+
+writeGreen("Bullets: " + bullets);
+
+
+writeGreen("[FxS] Bullet System Loaded!");
+
+
+
+
+
+}
+
+function addBullets(amount){
+
+bullets + amount = bullets;
+
+
+
+
+}
+
+// Name: Write Functions
+// Description: Simple write functions.
+
+function writeHeader( text ){
+
+document.write("<h1>");
+document.write(text);
+document.write("</h1>");
+
+
+}
+
+function writeDiv( text, div ){
+
+var x=document.getElementById(div)
+
+x.write(text)
+
+}
+
+function write( text ){
+
+document.write("<p>");
+document.write(text);
+document.write("</p>");
+
+
+}
+
+
+function writeGreen( text ){
+
+document.write("<p style='color:green'>");
+document.write(text);
+document.write("</p>");
+
+
+}
+
+
+function writeBlue( text ){
+
+document.write("<p style='color:blue'>");
+document.write(text);
+document.write("</p>");
+
+
+}
+
+
+function writeRed( text ){
+
+document.write("<p style='color:red'>");
+document.write(text);
+document.write("</p>");
+
+
+}
+
+// End of Write Functions \\
+
+// Name: Take Cash
+// Description: Take cash from a Player's clientside account.
+
+function takeCash(amount){
+
+cash = cash - amount;
+parseInt(amount);
+
+
+writeRed("Cash Taken: $" + amount);
+write("Current Cash: $" + cash);
+
+
+}
+
+// Name: Donate Cash
+// Description: For use in the charity system that is being created.
+
+function donateCash(amount, type){
+
+cash = cash - amount;
+parseInt(amount);
+
+write("Receipt: #" + setID);
+writeRed("Cash Donated: $" + amount);
+write("Cash Left: $" + cash);
+write("Donated to: " + type);
+document.close();
+
+}
+
+// Minimum random number 
+var min = 10000; 
+ 
+// Maximum random number 
+var max = 90000; 
+ 
+// Returns a random number between min and max 
+function random() { 
+    var random_number = Math.random(); 
+ 
+    return Math.floor((random_number * max) + min); 
+} 
+ 
+// Returns false if number is in the array 
+function random_is_unique(random_num_, array_) { 
+    // Could use indexOf, but just looping here for simplicity. 
+    // And not so sure IE has this capability. 
+    for(i = 0; i < array_.length; i++) { 
+        if(array_[i] == random_num_) { 
+            return false; 
+        }                         
+    } 
+    return true; 
+} 
+ 
+// Returns a guaranteed unique, or -1 if no more unique values 
+// are availble to return 
+function guaranteed_unique(array_) { 
+    random_number = random(); 
+ 
+    // Just an iterator, so we have a terminating condition 
+    tries = 0;     
+ 
+    while(!random_is_unique(random_number, array_)) { 
+        // This is dumb. There's likely a better way to do this, but it's 
+        // quick and dirty. It also does not guarantee you've tested all 
+        // integers.  
+        if(tries > max) { 
+            return -1; 
+        } 
+ 
+        random_number = random(); 
+ 
+        tries++; 
+    } 
+ 
+    return random_number; 
+} 
+ 
+my_array = new Array(); 
+my_array[0] = 1; 
+my_array[1] = 15; 
+my_array[2] = 6; 
+my_array[3] = 9; 
+my_array[4] = 13; 
+ 
+setID = guaranteed_unique(my_array); 
+
+
+// Health System
+
+function startHealth(){
+
+parseInt(health);
+health = 100;
+
+writeGreen("[FxS - Health] The health system works correctly.");
+
+
+
+}
+
+function takeHealth( amount ){
+
+parseInt(amount);
+
+parseInt(health);
+
+parseInt(newHealth);
+
+health = health - amount;
+
+
+writeRed("[FxS] You were attacked for, " + amount + " health.");
+
+
+}
+
+// End of Health System \\
+
+
+
+// Name: Add Cash Function
+// Description: A cash function, used to add functionality to the framework.
+
+function addCash(amount){
+
+cash = cash + amount;
+parseInt(amount);
+
+
+
+
+}
+
+// Name: Take Cash
+// Description: Take cash from a Player's clientside account.
+
+function takeCash(amount){
+
+cash = cash - amount;
+parseInt(amount);
+
+
+writeRed("Cash Taken: $" + amount);
+write("Current Cash: $" + cash);
+document.close()
+
+
+}
+
+function startHealth(){
+
+parseInt(health);
+health = 100;
+
+writeGreen("[FxS - Health] The health system works correctly.");
+
+
+
+}
+
+function takeHealth( amount ){
+
+parseInt(amount);
+
+parseInt(health);
+
+parseInt(newHealth);
+
+health = health - amount;
+
+
+writeRed("[FxS] You were attacked for, " + amount + " health.");
+
+
+}
+
+// Object Constructor for Items
+function Item( name, price, weight, rarity ){
+
+this.name = name;
+this.price = parseInt(price);
+this.weight = parseInt(weight);
+this.rarity = rarity;
+
+
+
+
+}
+
+
+writeGreen("[FxS] Object constructors loaded...");
+
+
+// Items
+
+var steak = new Item(
+
+"Steak",
+50,
+50,
+"Common"
+
+
+)
+
+var knife = new Item(
+
+"Rusty Combat Knife",
+100,
+0.10,
+"Not Common"
+
+)
+
+
+
+
+
+
+

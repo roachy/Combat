@@ -1,0 +1,21 @@
+<html>
+<body style="width:250px;color:white;background-color:black;text-align:center">
+<h1 style="width:250px;border:2.5px solid red;"> City Life - Base </h1>
+<script type="text/javascript" src="functions.js"></script>
+<script type="text/javascript" src="core.js"></script>
+<input type="button"value="Add $5 to your Account" onClick="addCash(5, 'result')">
+<input type="button"value="Donate $500 to Mafia Veterans" onClick="donateCash(500, 'Help for Mafia Veterans')">
+<input type="button"value="Donate $500 to NWMBLA" onClick="donateCash(500, 'North West Man Boy Love Association')">
+<input type="button"value="Donate $500,000 to Kyle's Crack Addiction" onClick="donateCash(500000, 'The Kyle Crack Addiction Association')">
+
+
+
+<div id="result">
+<h1> RESULT </h1>
+
+</div>
+
+
+
+</body>
+</html>

@@ -71,13 +71,6 @@ document.write("</h1>");
 
 }
 
-function writeDiv( text, div ){
-
-var x=document.getElementById(div)
-
-x.write(text)
-
-}
 
 function write( text ){
 
